@@ -1,0 +1,12 @@
+// for paragraphs inside the div
+// for ul in the div 
+// this is the power of sass
+div {
+    font-size: 18px;
+    p {
+        color: blue;
+    }
+    ul {
+        color: green;
+    }
+}

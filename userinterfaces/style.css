@@ -1,0 +1,27 @@
+/* to specify the animation details  */
+
+
+/* start form 2px and grow to 100px */
+
+@keyframes grow {
+    /* we can also use 0% to rep begining of animation 50% to rep half etc */
+    from {
+        font-size: 20px;
+        left: 0%;
+    }
+    to {
+        font-size: 100px;
+        left: 50%;
+    }
+}
+
+h1 {
+    /* it should have a position relative to other things */
+    position: relative;
+    animation-name: grow;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    /* the animation count how manytime u want to do it this can be any integer or infinite */
+    /* what direction the animation should go  */
+}

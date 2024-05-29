@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colors</title>
+</head>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('select').onchange = function() {
+                document.querySelector('#hello').style.color = this.value
+                console.log(this.value)
+            }
+        })
+        //get all the buttons and assign the colors to it 
+
+    /* document.querySelectorAll('button').forEach((button) => {
+         button.onclick = () => (
+             document.querySelector('#hello').style.color = button.dataset.color
+         )
+     }) */
+</script>
+
+<body>
+    <h1 id="hello">Hello</h1>
+    <!-- data attribute is used  to store data about the html element data-nameUwantToGiveAttribute-->
+    <!-- <button data-color="red">Red</button> -->
+
+    <select>
+        <option value="black">Black</option>
+        <option value="red">Red</option>
+        <option value="blue">BLUE</option>
+        <option value="green">GREEN</option>
+    
+    </select>
+</body>
+
+</html>

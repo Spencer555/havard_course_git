@@ -1,0 +1,11 @@
+Single page applications
+
+window - the entire browser
+.innerWidth the size of user screen
+.innerHeight the height of user screen
+
+.scrollY - how many pixels far Y have u scrolled when u are at top of page its 0 
+.scrollX - how many pixels far X have u scrolled when u are at top of page its 0 
+
+
+scrollY + innerHeight + heightOfWindow would be equal to document.body.offsetHeight

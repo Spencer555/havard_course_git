@@ -1,0 +1,25 @@
+// different elements have some aspects similar and only a few differences like bootstrap alert
+%message {
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 9px;
+}
+
+.success {
+    @extend %message;
+    background-color: green;
+}
+
+.danger {
+    @extend %message;
+    background-color: red;
+}
+
+.warning {
+    @extend %message;
+    background-color: orange;
+}

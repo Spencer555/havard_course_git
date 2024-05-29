@@ -1,0 +1,14 @@
+// creating variables 
+// to compile sass variables.scss:variables.css
+// to automate the process to make it recompile automatically when u manke changes 
+// sass --watch variables.scss:variables.css
+$color: orange;
+ul {
+    font-size: 14px;
+    color: $color;
+}
+
+ol {
+    font-size: 18px;
+    color: $color;
+}
