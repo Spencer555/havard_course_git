@@ -25,7 +25,7 @@ class Flight(models.Model):
         # return self.origin != self.destination or self.duration >= 0
     
     # right one for functional app
-        return self.origin != self.destination and self.duration >= 0
+        return self.origin != self.destination and self.duration > 0
 
 class Passanger(models.Model):
     first = models.CharField(max_length=64)
