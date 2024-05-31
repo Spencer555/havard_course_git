@@ -1,0 +1,51 @@
+# version: '3.8'
+
+# # telling docker we have two services for web and db the db would be built with postgress and web with the code we have given and to the docker when we run on our own pc we want port 8000 to correspond to container port 8000
+# services:
+#   db:
+#       image: postgres:latest
+#       environment:
+#         POSTGRES_USER: myuser
+#         POSTGRES_PASSWORD: mypassword
+#         POSTGRES_DB: mydatabase
+#       volumes:
+#         - db_data:/var/lib/postgresql/data
+#       ports:
+#         - "5432:5432"
+
+#   web:
+      # build: . 
+      # volumes:
+      #   - .:/usr/src/app
+      # ports:
+      #     - "8000:8000"
+
+
+version: '3.8'
+
+services:
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: mydatabase
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  web:
+    build: .
+    volumes:
+      - .:/usr/src/app
+    depends_on:
+      - db
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgres://myuser:mypassword@db:5432/mydatabase
+
+volumes:
+  db_data:
+  
