@@ -3,7 +3,7 @@ from django.urls import reverse
 from django.http import HttpResponseRedirect
 # Create your views here.
 
-from .models import Flight, Airport, Passanger
+from .models import Flight, Passanger
 
 
 

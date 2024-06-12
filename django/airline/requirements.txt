@@ -16,3 +16,4 @@ requests==2.32.2
 sqlparse==0.4.4
 tzdata==2023.4
 urllib3==2.2.1
+psycopg2==2.9.9
